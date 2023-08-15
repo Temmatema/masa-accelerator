@@ -1,26 +1,175 @@
 .header {
   position: absolute;
   width: 100%;
+  z-index: 1;
 }
 
 .header .container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  @include vp-1199 {
+    padding-top: 30px;
+  }
+
+  @include vp-767 {
+    padding-top: 20px;
+    justify-content: flex-end;
+  }
 }
 
 .header__logo {
   display: flex;
+
+  @include vp-767 {
+    position: absolute;
+    left: 15px;
+  }
 }
 
 .header__menu-btn {
-  width: 134px;
+  width: 100%;
   height: 54px;
-  font-size: 13px;
+  font-size: 14px;
   letter-spacing: 0.28px;
-  gap: 18px;
+  justify-content: space-between;
+  padding-left: 20px;
+  transition: width 0.2s ease;
+}
+
+.menu-true .header__menu-btn {
+  background-color: $color-blue;
+  color: $color-default-white;
+}
+
+.menu-true {
+  .btn-content {
+    background-color: $color-default-white;
+  }
+
+  .btn-content__bar {
+    background-color: $color-blue;
+  }
+}
+
+.menu-true .header__menu-btn:hover {
+  background-color: $color-default-white;
+  color: $color-blue;
+
+  .btn-content {
+    background-color: $color-blue;
+  }
+
+  .btn-content__bar {
+    background-color: $color-default-white;
+  }
+}
+
+.header__menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  max-height: 54px;
+  overflow: hidden;
+  width: 134px;
+  z-index: 1;
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    transition: width 0s ease;
+    transition-delay: 0.5s;
+  }
+}
+
+.menu-true {
+  animation: menu-in 0.7s forwards ease-in-out;
+
+  &::after {
+    width: 100%;
+  }
+
+  @include vp-767 {
+    animation: menu-in-mob 0.7s forwards ease-in-out;
+  }
+}
+
+.menu-false {
+  animation: menu-out 0.7s forwards ease-in-out;
+
+  @include vp-767 {
+    animation: menu-out-mob 0.7s forwards ease-in-out;
+  }
+}
+
+@keyframes menu-in-mob {
+  0% {
+    width: 134px;
+    max-height: 54px;
+  }
+  50% {
+    width: 100%;
+    max-height: 54px;
+  }
+  100% {
+    width: 100%;
+    max-height: 700px;
+  }
+}
+
+@keyframes menu-out-mob {
+  0% {
+    width: 100%;
+    max-height: 700px;
+  }
+  50% {
+    width: 100%;
+    max-height: 54px;
+  }
+  100% {
+    width: 134px;
+    max-height: 54px;
+  }
+}
+
+@keyframes menu-in {
+  0% {
+    width: 134px;
+    max-height: 54px;
+  }
+  50% {
+    width: 286px;
+    max-height: 54px;
+  }
+  100% {
+    width: 286px;
+    max-height: 700px;
+  }
+}
+
+@keyframes menu-out {
+  0% {
+    width: 286px;
+    max-height: 700px;
+  }
+  50% {
+    width: 286px;
+    max-height: 54px;
+  }
+  100% {
+    width: 134px;
+    max-height: 54px;
+  }
 }
 
 .header__menu-btn > .btn-content {
@@ -48,7 +197,7 @@
   bottom: 17px;
 }
 
-.btn-content--active {
+.menu-true {
   .bar-1 {
     top: 22px;
     transform: rotateZ(45deg);

@@ -34,6 +34,13 @@ body {
   background-color: $color-default-white;
 }
 
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
 a {
   color: $color-default-grey;
   text-decoration: none;

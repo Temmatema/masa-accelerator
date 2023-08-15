@@ -21,18 +21,320 @@
               <use xlink:href="img/sprite/logo.svg#logo" />
             </svg>
           </a>
-          <button class="btn btn-border header__menu-btn">
-            меню
-            <div class="btn-content">
-              <span class="btn-content__bar bar-1"></span>
-              <span class="btn-content__bar bar-2"></span>
-              <span class="btn-content__bar bar-3"></span>
+          <div class="header__menu">
+            <button class="btn btn-border header__menu-btn">
+              меню
+              <div class="btn-content">
+                <span class="btn-content__bar bar-1"></span>
+                <span class="btn-content__bar bar-2"></span>
+                <span class="btn-content__bar bar-3"></span>
+              </div>
+            </button>
+            <div class="menu">
+              <div class="menu__item"><a href="#">О проекте</a></div>
+              <div class="menu__item item-select">
+                <div class="item-select__wrap">
+                  <a class="item-select__link" href="#">Программы</a>
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.6"
+                      d="M11.454 3.81812L5.99947 8.72721L0.544922 3.81812"
+                      stroke="white"
+                    />
+                  </svg>
+                </div>
+                <ul class="menu__list">
+                  <li class="menu__inner-item"><a href="#">Стажировки</a></li>
+                  <li class="menu__inner-item"><a href="#">Волонтёрство</a></li>
+                  <li class="menu__inner-item"><a href="#">Учёба</a></li>
+                  <li class="menu__inner-item"><a href="#">Религия</a></li>
+                </ul>
+              </div>
+              <div class="menu__item"><a href="#">как поехать</a></div>
+              <div class="menu__item"><a href="#">отзывы</a></div>
+              <div class="menu__item item-select">
+                <div class="item-select__wrap">
+                  <a class="item-select__link" href="#">новости</a>
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      opacity="0.6"
+                      d="M11.454 3.81812L5.99947 8.72721L0.544922 3.81812"
+                      stroke="white"
+                    />
+                  </svg>
+                </div>
+                <ul class="menu__list">
+                  <li class="menu__inner-item"><a href="#">Стажировки</a></li>
+                  <li class="menu__inner-item"><a href="#">Волонтёрство</a></li>
+                  <li class="menu__inner-item"><a href="#">Учёба</a></li>
+                  <li class="menu__inner-item"><a href="#">Религия</a></li>
+                </ul>
+              </div>
+              <div class="menu__item"><a href="#">контакты</a></div>
             </div>
-          </button>
+          </div>
         </div>
       </header>
       <main>
-        <section class="hero"></section>
+        <section class="hero swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="img/hero-block/slide2-mobile.webp"
+                  type="image/webp"
+                  width="320"
+                  height="568"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="img/hero-block/slide2-mobile.jpg"
+                  width="320"
+                  height="568"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="img/hero-block/slide2-tablet.webp"
+                  type="image/webp"
+                  width="768"
+                  height="1024"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="img/hero-block/slide2-tablet.jpg"
+                  width="768"
+                  height="1024"
+                />
+                <source
+                  srcset="img/hero-block/slide2-desktop.webp"
+                  type="image/webp"
+                  width="1440"
+                  height="800"
+                />
+                <img
+                  src="img/hero-block/slide2-desktop.jpg"
+                  alt="Фон."
+                  width="1440"
+                  height="800"
+                />
+              </picture>
+              <div class="hero__content">
+                <div class="swiper-pagination"></div>
+                <div class="hero__title-wrap">
+                  <h2>
+                    Программы стажировок в&nbsp;крупнейших компаниях Израиля
+                  </h2>
+                </div>
+                <div class="hero__content-down">
+                  <p>
+                    Получите незаменимый опыт работы в ведущих израильских
+                    компаниях и государственных организациях.
+                  </p>
+                  <div>
+                    <a href="#" class="hero__link btn btn-border">
+                      подробнее
+                      <div class="btn-content">
+                        <svg
+                          width="10"
+                          height="10"
+                          viewBox="0 0 10 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_806_1826)">
+                            <path
+                              d="M1 9L9 1M9 1H1.05298M9 1V8.94702"
+                              stroke="white"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_806_1826">
+                              <rect width="10" height="10" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="img/hero-block/slide3-mobile.webp"
+                  type="image/webp"
+                  width="320"
+                  height="568"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="img/hero-block/slide3-mobile.jpg"
+                  width="320"
+                  height="568"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="img/hero-block/slide3-tablet.webp"
+                  type="image/webp"
+                  width="768"
+                  height="1024"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="img/hero-block/slide3-tablet.jpg"
+                  width="768"
+                  height="1024"
+                />
+                <source
+                  srcset="img/hero-block/slide3-desktop.webp"
+                  type="image/webp"
+                  width="1440"
+                  height="800"
+                />
+                <img
+                  src="img/hero-block/slide2-desktop.jpg"
+                  alt="Фон."
+                  width="1440"
+                  height="800"
+                />
+              </picture>
+              <div class="hero__content">
+                <div class="swiper-pagination"></div>
+                <div class="hero__title-wrap">
+                  <h2>
+                    Волонтёрские программы – внесите свой вклад в&nbsp;общество
+                  </h2>
+                </div>
+                <div class="hero__content-down">
+                  <p>
+                    Возможности для преподавания, органического сельского
+                    хозяйства, устойчивого образа жизни и другое.
+                  </p>
+                  <div>
+                    <a href="#" class="hero__link btn btn-border">
+                      подробнее
+                      <div class="btn-content">
+                        <svg
+                          width="10"
+                          height="10"
+                          viewBox="0 0 10 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_806_1826)">
+                            <path
+                              d="M1 9L9 1M9 1H1.05298M9 1V8.94702"
+                              stroke="white"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_806_1826">
+                              <rect width="10" height="10" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source
+                  media="(max-width: 767px)"
+                  srcset="img/hero-block/slide1-mobile.webp"
+                  type="image/webp"
+                  width="320"
+                  height="568"
+                />
+                <source
+                  media="(max-width: 767px)"
+                  srcset="img/hero-block/slide1-mobile.jpg"
+                  width="320"
+                  height="568"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="img/hero-block/slide1-tablet.webp"
+                  type="image/webp"
+                  width="768"
+                  height="1024"
+                />
+                <source
+                  media="(max-width: 1199px)"
+                  srcset="img/hero-block/slide1-tablet.jpg"
+                  width="768"
+                  height="1024"
+                />
+                <source
+                  srcset="img/hero-block/slide1-desktop.webp"
+                  type="image/webp"
+                  width="1440"
+                  height="800"
+                />
+                <img
+                  src="img/hero-block/slide1-desktop.jpg"
+                  alt="Фон."
+                  width="1440"
+                  height="800"
+                />
+              </picture>
+              <div class="hero__content">
+                <div class="swiper-pagination"></div>
+                <div class="hero__title-wrap">
+                  <h2>Глобальный профессиональный опыт обучения за&nbsp;рубежом</h2>
+                </div>
+                <div class="hero__content-down">
+                  <p>
+                    Погрузитесь в академическую программу, проходя практику в&nbsp;Тель-Авиве и ощущая настоящий израильский стиль жизни!
+                  </p>
+                  <div>
+                    <a href="#" class="hero__link btn btn-border">
+                      подробнее
+                      <div class="btn-content">
+                        <svg
+                          width="10"
+                          height="10"
+                          viewBox="0 0 10 10"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <g clip-path="url(#clip0_806_1826)">
+                            <path
+                              d="M1 9L9 1M9 1H1.05298M9 1V8.94702"
+                              stroke="white"
+                            />
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_806_1826">
+                              <rect width="10" height="10" fill="white" />
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
         <!-- <section class="intro">
           <div class="container">
             <h1>Тестовая страница.</h1>
