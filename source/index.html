@@ -4,17 +4,36 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Описание проекта">
-    <title>ProjectName</title>
-    <link rel="stylesheet" href="css/style.min.css">
+    <meta
+      name="description"
+      content="Глобальный профессиональный опыт обучения за рубежом."
+    />
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
+    <title>Маса</title>
+    <link rel="stylesheet" href="css/style.min.css" />
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="header">
+        <div class="container">
+          <a class="header__logo" href="index.html">
+            <svg width="52" height="52" xmlns="http://www.w3.org/2000/svg">
+              <use xlink:href="img/sprite/logo.svg#logo" />
+            </svg>
+          </a>
+          <button class="btn btn-border header__menu-btn">
+            меню
+            <div class="btn-content">
+              <span class="btn-content__bar bar-1"></span>
+              <span class="btn-content__bar bar-2"></span>
+              <span class="btn-content__bar bar-3"></span>
+            </div>
+          </button>
+        </div>
       </header>
       <main>
-        <section class="intro">
+        <section class="hero"></section>
+        <!-- <section class="intro">
           <div class="container">
             <h1>Тестовая страница.</h1>
             <p>На данной странице показан пример модальных окон.</p>
@@ -22,7 +41,7 @@
             <p><a class="btn" href="#" data-open-modal="feedback">modal--feedback link</a></p>
             <p><a class="btn" href="#" data-open-modal="success">modal--success link</a></p>
           </div>
-        </section>
+        </section> -->
       </main>
       <footer>
         <div class="container"></div>
@@ -35,7 +54,12 @@
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
           <p class="modal__description">Обычная модалка</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <button
+            class="modal__close-btn btn-reset"
+            type="button"
+            aria-label="Закрыть попап"
+            data-close-modal
+          >
             <svg width="15" height="15">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>
@@ -44,12 +68,24 @@
       </div>
     </div>
 
-    <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+    <div
+      class="modal modal--preload modal--fit-content modal--no-scale"
+      data-modal="success"
+    >
       <div class="modal__wrapper">
         <div class="modal__overlay" data-close-modal></div>
         <div class="modal__content">
-          <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
-          <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <p class="modal__description">
+            Размер этой модалки зависит от ширины контента,
+            <br />
+            отключена анимация-скейл
+          </p>
+          <button
+            class="modal__close-btn btn-reset"
+            type="button"
+            aria-label="Закрыть попап"
+            data-close-modal
+          >
             <svg width="15" height="15">
               <use xlink:href="img/sprite.svg#icon-close"></use>
             </svg>

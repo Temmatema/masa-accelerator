@@ -1,14 +1,18 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-family: $ff-manrope;
+  position: relative;
+  color: $color-blue;
+  text-transform: uppercase;
+  font-weight: 500;
 
-  color: $color-default-white;
-
-  background-color: $color-neon-blue;
-  border: none;
+  background-color: transparent;
+  border: 1px $color-blue solid;
+  border-radius: 30px;
   cursor: pointer;
-
-  transition: opacity $trans-default;
 
   &--red {
     background-color: $color-torch-red;
@@ -19,8 +23,25 @@
 
     pointer-events: none;
   }
+}
 
-  @include hover-focus {
-    opacity: 0.8;
+.btn-border {
+  transition: all 0.2s ease;
+}
+
+.btn-border:hover {
+  color: $color-default-white;
+  background-color: $color-blue;
+
+  .btn-content {
+    background-color: $color-default-white;
   }
+}
+
+.btn-content {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  background-color: $color-blue;
+  transition: background-color 0.2s ease;
 }
