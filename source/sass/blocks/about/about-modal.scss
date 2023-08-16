@@ -1,0 +1,189 @@
+.modal__content {
+  border-radius: 16px;
+  padding: 53px 80px 20px;
+  width: 510px;
+  min-height: 611px;
+}
+
+.modal__top-wrap h3 {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 36px;
+  color: $color-blue;
+  text-align: center;
+  margin-bottom: 7px;
+}
+
+.modal__top-wrap p {
+  line-height: 26px;
+  text-align: center;
+  margin-bottom: 19px;
+}
+
+.modal__field {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.cities-active {
+  .field-cities-select {
+    display: flex;
+  }
+}
+
+.field-cities-select {
+  display: none;
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  top: 80px;
+}
+
+.field-cities-select button {
+  cursor: pointer;
+  border: none;
+  background-color: $color-default-white;
+  border-left: 1px solid $color-default-grey;
+  border-right: 1px solid $color-default-grey;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  padding: 17px 20px;
+  text-align: left;
+}
+
+.field-cities-select button:hover {
+  background-color: $color-blue;
+  color: $color-default-white;
+}
+
+.field-cities-select button:first-child {
+  border-radius: 8px 8px 0 0;
+  border-top: 1px solid $color-default-grey;
+}
+
+.field-cities-select button:last-child{
+  border-bottom: 1px solid $color-default-grey;
+  border-radius: 0 0 8px 8px;
+}
+
+.input-cities {
+  position: relative;
+  cursor: pointer;
+}
+
+.input-cities + svg {
+  position: absolute;
+  right: 20px;
+  bottom: 17px;
+}
+
+.modal__field label {
+  opacity: 0.8;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  margin-bottom: 8px;
+}
+
+.modal__field input {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid rgba($color: $color-default-grey, $alpha: 0.3);
+  padding: 0 25px;
+}
+
+.modal__field input:hover {
+  border-color: $color-default-grey;
+}
+
+.modal__field input:focus {
+  outline: none;
+  border-color: $color-default-grey;
+}
+
+.modal__field.is-invalid input {
+  border-color: #ff5e66;
+  background-color: rgba(255, 94, 102, 0.2);
+}
+
+.modal__policy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  padding-top: 4px;
+
+  label {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 12px;
+    cursor: pointer;
+  }
+}
+
+.modal__policy input[type='checkbox'] {
+  display: none;
+}
+
+.modal__policy span {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid $color-blue;
+  border-radius: 2px;
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+
+.modal__policy.is-invalid span {
+  border-color: #ff5e66;
+  background-color: rgba(255, 94, 102, 0.2);
+}
+
+.modal__policy input[type='checkbox']:checked + span {
+  background-color: $color-blue;
+  background-image: url('../img/check-arrow.svg');
+}
+
+.modal__btn {
+  gap: 30px;
+  margin: 0 auto;
+  width: 194px;
+  height: 54px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  letter-spacing: 0.28px;
+
+  svg {
+    transition: transform 0.2s ease;
+  }
+}
+
+.modal__btn:hover {
+  svg {
+    transform: rotateZ(45deg);
+  }
+
+  path {
+    stroke: $color-blue;
+  }
+}
+
+.modal__btn .btn-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include vp-767 {
+    width: 34px;
+    height: 34px;
+  }
+}

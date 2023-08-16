@@ -77,27 +77,10 @@
   overflow: hidden;
   width: 134px;
   z-index: 1;
-
-  &::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    right: 0;
-    top: 0;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-    transition: width 0s ease;
-    transition-delay: 0.5s;
-  }
 }
 
 .menu-true {
   animation: menu-in 0.7s forwards ease-in-out;
-
-  &::after {
-    width: 100%;
-  }
 
   @include vp-767 {
     animation: menu-in-mob 0.7s forwards ease-in-out;
