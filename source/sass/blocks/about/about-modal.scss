@@ -59,6 +59,10 @@
   .field-cities-select {
     display: flex;
   }
+
+  svg {
+    transform: rotateZ(180deg);
+  }
 }
 
 .field-cities-select {

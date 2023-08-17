@@ -263,6 +263,7 @@
 
   svg {
     transition: transform 0.2s ease;
+    color: $color-default-white;
   }
 
   @include vp-1199 {
@@ -291,9 +292,6 @@
 .hero__link:hover {
   svg {
     transform: rotateZ(45deg);
-  }
-
-  path {
-    stroke: $color-blue;
+    color: $color-blue;
   }
 }

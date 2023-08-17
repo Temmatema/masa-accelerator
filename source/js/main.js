@@ -5,6 +5,7 @@ import './modules/menu-bar.js';
 import './modules/hero-swiper.js';
 import './modules/modal-policy.js';
 import './modules/select-modal.js';
+import './modules/programs-swiper.js';
 
 // ---------------------------------
 
