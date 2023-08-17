@@ -4,7 +4,6 @@ import {Form} from './modules/form-validate/form';
 import './modules/menu-bar.js';
 import './modules/hero-swiper.js';
 import './modules/modal-policy.js';
-import './modules/close-modal.js';
 import './modules/select-modal.js';
 
 // ---------------------------------

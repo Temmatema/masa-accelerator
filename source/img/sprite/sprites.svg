@@ -2,4 +2,7 @@
   <symbol viewBox="0 0 22 22" id="close">
     <path d="M2 20L11 11M11 11L20 2M11 11L20 20M11 11L2 2" stroke="#316DC2" stroke-linecap="round" stroke-linejoin="round"/>
   </symbol>
+  <symbol viewBox="0 0 18 22" id="star">
+    <path d="M9 0L12.0138 5.47476L18 5.5L15.0275 11L18 16.5L12.0138 16.5252L9 22L5.98623 16.5252L0 16.5L2.97246 11L0 5.5L5.98623 5.47476L9 0Z" fill="white"/>
+  </symbol>
 </svg>

@@ -28,9 +28,11 @@ items.forEach((el, index) =>
 
 document.addEventListener('click', (e) => {
   if (!menu.contains(e.target) && e.target !== btn) {
-    menu.classList.remove('menu-true');
-    menu.classList.add('menu-false');
+    if (menu.classList.contains('menu-true')) {
+      menu.classList.remove('menu-true');
+      menu.classList.add('menu-false');
 
-    main.classList.remove('menu-active');
+      main.classList.remove('menu-active');
+    }
   }
 });

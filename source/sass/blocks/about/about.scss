@@ -7,12 +7,32 @@
   gap: 159px;
 
   @include vp-1440 {
-    grid-template-columns: 477px 1fr;
+    grid-template-columns: 477px auto;
     justify-content: flex-start;
+  }
+
+  @include vp-1199 {
+    display: flex;
+    padding-top: 99px;
+    flex-direction: column;
+    gap: 29px;
+  }
+
+  @include vp-767 {
+    padding-top: 69px;
+    padding-bottom: 40px;
   }
 }
 
+.about__col-1 {
+  @include vp-1199 {
+    max-width: 440px;
+  }
 
+  @include vp-767 {
+    max-width: 280px;
+  }
+}
 
 .about__col-1 h2 {
   font-size: 50px;
@@ -21,11 +41,33 @@
   color: $color-blue;
   margin-bottom: 30px;
   padding-top: 5px;
+
+  @include vp-1199 {
+    font-size: 34px;
+    padding-top: 0;
+    margin-bottom: 25px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    margin-bottom: 13px;
+    line-height: 20px;
+  }
 }
 
 .about__col-1 p {
   font-size: 22px;
   line-height: 32px;
+
+  @include vp-1199 {
+    font-size: 20px;
+    line-height: 26px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 22px;
+  }
 }
 
 .about__col-2 {
@@ -38,12 +80,34 @@
   margin-bottom: 33px;
   font-weight: 400;
   color: $color-blue;
+
+  @include vp-1199 {
+    font-size: 28px;
+    line-height: 28px;
+    margin-bottom: 23px;
+  }
+
+  @include vp-767 {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 12px;
+  }
 }
 
 .about__col-2 p {
   font-size: 16px;
   line-height: 26px;
   margin-bottom: 33px;
+
+  @include vp-1199 {
+    line-height: 20px;
+    margin-bottom: 36px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+    margin-bottom: 25px;
+  }
 }
 
 .about__btn {
@@ -58,6 +122,15 @@
 
   svg {
     transition: transform 0.2s ease;
+  }
+
+  @include vp-767 {
+    width: 221px;
+    height: 42px;
+    font-size: 12px;
+    line-height: 12px;
+    letter-spacing: 0.24px;
+    gap: 19px;
   }
 }
 
