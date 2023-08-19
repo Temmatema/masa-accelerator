@@ -240,11 +240,9 @@
 }
 /* Bullets */
 .swiper-pagination-bullets-dynamic {
-  overflow: hidden;
-  font-size: 0;
 }
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  transform: scale(0.33);
+  transform: scale(0);
   position: relative;
 }
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active {
@@ -254,16 +252,16 @@
   transform: scale(1);
 }
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev {
-  transform: scale(0.66);
+  transform: scale(1);
 }
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-prev-prev {
-  transform: scale(0.33);
+  transform: scale(1);
 }
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next {
-  transform: scale(0.66);
+  transform: scale(1);
 }
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-next-next {
-  transform: scale(0.33);
+  transform: scale(1);
 }
 .swiper-pagination-bullet {
   width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 8px));
@@ -312,8 +310,6 @@ button.swiper-pagination-bullet {
 
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic,
 .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic {
-  left: 50%;
-  transform: translateX(-50%);
   white-space: nowrap;
 }
 .swiper-horizontal > .swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet,

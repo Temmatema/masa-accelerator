@@ -651,50 +651,77 @@
               <button type="button" class="news__btn btn btn-border" data-filter="career">карьера</button>
               <button type="button" class="news__btn btn btn-border" data-filter="travel">путешествия</button>
             </div>
-          </div>
+
+              <div class="news__swiper swiper">
+                <div class="news__swiper-wrapper swiper-wrapper">
+
+                </div>
+                <div class="news__btns-wrap">
+                  <button type="button" class="news__swipe-btn news__prev-btn">
+                    <svg width="10" height="10">
+                      <use xlink:href="img/sprite/sprites.svg#btn-arrow"></use>
+                    </svg>
+                  </button>
+                  <div class="news__pagination swiper-pagination"></div>
+                  <button type="button" class="news__swipe-btn news__next-btn">
+                    <svg width="10" height="10">
+                      <use xlink:href="img/sprite/sprites.svg#btn-arrow"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
         </section>
       </main>
-      <footer>
+      <footer class="footer">
         <div class="container">
-          <div class="footer__menu">
-            <a href="index.html">
-              <svg width="52" height="52">
-                <use xlink:href="img/sprite/logo.svg#logo"></use>
-              </svg>
-            </a>
-            <ul>
-              <li><a href="#">О проекте</a></li>
-              <li><a href="#">Программы</a></li>
-              <li><a href="#">Как поехать</a></li>
-              <li><a href="#">Отзывы</a></li>
-              <li><a href="#">Новости</a></li>
-              <li><a href="#">Контакты</a></li>
-            </ul>
-          </div>
-          <div class="footer__social">
-            <ul class="social">
-              <li class="social__item">
-                <a href="#">
-                  <svg width="16" height="16">
-                    <use xlink:href="img/sprite/sprites.svg#vk"></use>
+          <div class="footer__content">
+            <div class="footer__wrap">
+              <div class="footer__menu">
+                <a href="index.html">
+                  <svg width="52" height="52">
+                    <use xlink:href="img/sprite/logo.svg#logo"></use>
                   </svg>
                 </a>
-              </li>
-              <li class="social__item">
-                <a href="#">
-                  <svg width="16" height="16">
-                    <use xlink:href="img/sprite/sprites.svg#roommates"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="social__item">
-                <a href="#">
-                  <svg width="16" height="16">
-                    <use xlink:href="img/sprite/sprites.svg#reddit"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+                <ul>
+                  <li><a href="#">О проекте</a></li>
+                  <li><a href="#">Программы</a></li>
+                  <li><a href="#">Как поехать</a></li>
+                  <li><a href="#">Отзывы</a></li>
+                  <li><a href="#">Новости</a></li>
+                  <li><a href="#">Контакты</a></li>
+                </ul>
+              </div>
+              <div class="footer__social">
+            </div>
+              <ul class="social">
+                <li class="social__item">
+                  <a href="#">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/sprite/sprites.svg#vk"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/sprite/sprites.svg#roommates"></use>
+                    </svg>
+                  </a>
+                </li>
+                <li class="social__item">
+                  <a href="#">
+                    <svg width="16" height="16">
+                      <use xlink:href="img/sprite/sprites.svg#reddit"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="footer__policy">
+              <p>Masa © 2023 Все права защищены</p>
+              <a href="#">Политика конфиденциальности</a>
+            </div>
           </div>
         </div>
       </footer>
@@ -809,6 +836,28 @@
         </div>
       </div>
     </div>
+
+    <template id="news">
+      <div class="new-card">
+        <img src="" alt="Новость." width="286" height="400">
+        <div class="new-card__content">
+          <div class="new-card__row-1">
+            <span></span>
+          </div>
+          <div class="new-card__row-2">
+            <h3></h3>
+          </div>
+          <div class="new-card__row-3">
+            <p></p>
+            <a class="new-card__link" href="#"><div class="btn-content">
+              <svg width="8" height="8">
+                <use xlink:href="img/sprite/sprites.svg#btn-arrow"></use>
+              </svg>
+            </div></a>
+          </div>
+        </div>
+      </div>
+    </template>
 
     <script src="js/vendor.min.js"></script>
     <script src="js/main.min.js"></script>
