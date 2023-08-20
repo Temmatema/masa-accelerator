@@ -8,6 +8,17 @@
     <link rel="icon" type="image/x-icon" href="img/favicon.ico" />
     <title>Маса</title>
     <link rel="stylesheet" href="css/style.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+      crossorigin=""
+    ></script>
   </head>
   <body>
     <div class="wrapper">
@@ -643,34 +654,396 @@
           <div class="container">
             <h2>Новости и материалы</h2>
             <div class="news__filters">
-              <button type="button" class="news__btn btn btn-border active" data-filter="all">общее</button>
+              <button type="button" class="news__btn btn btn-border active" data-filter="all">
+                общее
+              </button>
               <button type="button" class="news__btn btn btn-border" data-filter="volunteer">
                 Волонтёрство
               </button>
-              <button type="button" class="news__btn btn btn-border" data-filter="trainee">Стажировки</button>
-              <button type="button" class="news__btn btn btn-border" data-filter="career">карьера</button>
-              <button type="button" class="news__btn btn btn-border" data-filter="travel">путешествия</button>
+              <button type="button" class="news__btn btn btn-border" data-filter="trainee">
+                Стажировки
+              </button>
+              <button type="button" class="news__btn btn btn-border" data-filter="career">
+                карьера
+              </button>
+              <button type="button" class="news__btn btn btn-border" data-filter="travel">
+                путешествия
+              </button>
             </div>
 
-              <div class="news__swiper swiper">
-                <div class="news__swiper-wrapper swiper-wrapper">
-
+            <div class="news__swiper swiper">
+              <div class="news__swiper-wrapper swiper-wrapper"></div>
+              <div class="news__btns-wrap">
+                <button type="button" class="news__swipe-btn news__prev-btn">
+                  <svg width="10" height="10">
+                    <use xlink:href="img/sprite/sprites.svg#btn-arrow"></use>
+                  </svg>
+                </button>
+                <div class="news__pagination swiper-pagination"></div>
+                <button type="button" class="news__swipe-btn news__next-btn">
+                  <svg width="10" height="10">
+                    <use xlink:href="img/sprite/sprites.svg#btn-arrow"></use>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="questions">
+          <div class="container">
+            <h2>Вопросы и ответы</h2>
+            <div
+              class="questions__accordion accordion"
+              data-accordion="parent"
+              data-single="data-single"
+              data-close-inner="data-close-inner"
+            >
+              <div class="accordion__element" data-accordion="element">
+                <div class="accordion__top-wrap">
+                  <p>Кто организатор? Какие сроки у программы?</p>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <div class="btn-content"></div>
+                  </button>
                 </div>
-                <div class="news__btns-wrap">
-                  <button type="button" class="news__swipe-btn news__prev-btn">
-                    <svg width="10" height="10">
-                      <use xlink:href="img/sprite/sprites.svg#btn-arrow"></use>
-                    </svg>
+                <div class="accordion__content" data-accordion="content">
+                  <div class="accordion__wrapper">
+                    <p>
+                      Организатором программы является проект “Маса” в сотрудничестве с
+                      образовательными учреждениями. Сроки программы обмена могут варьироваться от
+                      одного семестра до года.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__element" data-accordion="element">
+                <div class="accordion__top-wrap">
+                  <p>Что такое грант на&nbsp;обучение?</p>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <div class="btn-content"></div>
                   </button>
-                  <div class="news__pagination swiper-pagination"></div>
-                  <button type="button" class="news__swipe-btn news__next-btn">
-                    <svg width="10" height="10">
-                      <use xlink:href="img/sprite/sprites.svg#btn-arrow"></use>
-                    </svg>
+                </div>
+                <div class="accordion__content" data-accordion="content">
+                  <div class="accordion__wrapper">
+                    <p>
+                      Грант на обучение - это финансовая поддержка, которую предоставляет
+                      организатор программы обмена студентами для оплаты учебных расходов.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__element" data-accordion="element">
+                <div class="accordion__top-wrap">
+                  <p>Как определяется стоимость программы?</p>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <div class="btn-content"></div>
                   </button>
+                </div>
+                <div class="accordion__content" data-accordion="content">
+                  <div class="accordion__wrapper">
+                    <p>
+                      Полная стоимость определяется организаторами в зависимости
+                      от&nbsp;направления. В большинстве случаев грант «Маса» не покрывает полную
+                      стоимость программы, и поэтому предусматривается определённая доля личного
+                      участия.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__element accordion__element-4" data-accordion="element">
+                <div class="accordion__top-wrap">
+                  <p>Признаётся ли учеба в&nbsp;рамках проекта для&nbsp;дальнейшего обучения?</p>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <div class="btn-content"></div>
+                  </button>
+                </div>
+                <div class="accordion__content" data-accordion="content">
+                  <div class="accordion__wrapper">
+                    <p>
+                      Студенты, участвующие в проекте, могут использовать полученные знания и навыки
+                      в своей будущей профессиональной деятельности или продолжить обучение в высших
+                      учебных заведениях. Кроме того, многие университеты и колледжи предоставляют
+                      кредиты за участие в программе обмена студентами.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion__element accordion__element-5" data-accordion="element">
+                <div class="accordion__top-wrap">
+                  <p>Как выглядит полный процесс регистрации на&nbsp;программу «Маса»?</p>
+                  <button class="accordion__button" type="button" data-accordion="button">
+                    <div class="btn-content"></div>
+                  </button>
+                </div>
+                <div class="accordion__content" data-accordion="content">
+                  <div class="accordion__wrapper">
+                    <p>
+                      Процесс регистрации на программу обмена включает выбор университета-партнера и
+                      программы обмена, общение с координатором программы, заполнение заявления и
+                      предоставление необходимых документов, прохождение интервью, оформление визы,
+                      жилья и страховки, обучение по безопасности за границей и подписание договора
+                      об участии в программе. Подробнее можно узнать позвонив в центр.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+        <section class="reviews">
+          <div class="container">
+            <h2>Отзывы</h2>
+            <div class="reviews__swiper swiper">
+              <div class="swiper-wrapper">
+                <div class="review swiper-slide">
+                  <div class="review__content-top">
+                    <div class="review__avatar">
+                      <img src="img/reviews/photo1.jpg" alt="Аватар." width="90" height="90" />
+                      <p>
+                        Сара
+                        <br />
+                        Аврахам
+                      </p>
+                    </div>
+                    <div class="review__info">
+                      <b>программа</b>
+                      <b>Дата</b>
+                      <p>Masa Art Challenge</p>
+                      <p>Осень 2022</p>
+                    </div>
+                  </div>
+                  <b>
+                    Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в
+                    жизни!
+                  </b>
+                  <p>
+                    Я рекомендую программу «Маса» всем израильским студентам, желающим получить
+                    незабываемые впечатления. Сочетание путешествий, общения и значимой работы
+                    действительно отличает её от других программ, и&nbsp;я&nbsp;чувствую огромную
+                    благодарность за предоставленную мне возможность.
+                  </p>
+                </div>
+                <div class="review swiper-slide">
+                  <div class="review__content-top">
+                    <div class="review__avatar">
+                      <img src="img/reviews/photo2.jpg" alt="Аватар." width="90" height="90" />
+                      <p>
+                        Давид
+                        <br />
+                        Иммервар
+                      </p>
+                    </div>
+                    <div class="review__info">
+                      <b>программа</b>
+                      <b>Дата</b>
+                      <p>Volunteer Chance</p>
+                      <p>Лето 2022</p>
+                    </div>
+                  </div>
+                  <b>
+                    Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.
+                  </b>
+                  <p>
+                    Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я
+                    бы очень рекомендовал эту волонтерскую программу всем, кто ищет значимый и
+                    незабываемый опыт. Организация была на высшем уровне. Для меня было честью быть
+                    частью такой удивительной инициативы.
+                  </p>
+                </div>
+                <div class="review swiper-slide">
+                  <div class="review__content-top">
+                    <div class="review__avatar">
+                      <img src="img/reviews/photo1.jpg" alt="Аватар." width="90" height="90" />
+                      <p>
+                        Сара
+                        <br />
+                        Аврахам
+                      </p>
+                    </div>
+                    <div class="review__info">
+                      <b>программа</b>
+                      <b>Дата</b>
+                      <p>Masa Art Challenge</p>
+                      <p>Осень 2022</p>
+                    </div>
+                  </div>
+                  <b>
+                    Я могу с уверенностью сказать, что это был один из самых незабываемых опытов в
+                    жизни!
+                  </b>
+                  <p>
+                    Я рекомендую программу «Маса» всем израильским студентам, желающим получить
+                    незабываемые впечатления. Сочетание путешествий, общения и значимой работы
+                    действительно отличает её от других программ, и&nbsp;я&nbsp;чувствую огромную
+                    благодарность за предоставленную мне возможность.
+                  </p>
+                </div>
+                <div class="review swiper-slide">
+                  <div class="review__content-top">
+                    <div class="review__avatar">
+                      <img src="img/reviews/photo2.jpg" alt="Аватар." width="90" height="90" />
+                      <p>
+                        Давид
+                        <br />
+                        Иммервар
+                      </p>
+                    </div>
+                    <div class="review__info">
+                      <b>программа</b>
+                      <b>Дата</b>
+                      <p>Volunteer Chance</p>
+                      <p>Лето 2022</p>
+                    </div>
+                  </div>
+                  <b>
+                    Благодаря опыту стажировки я узнал так много нового о себе и об окружающем мире.
+                  </b>
+                  <p>
+                    Каждый день был возможностью оказать ощутимое влияние на жизнь других людей. Я
+                    бы очень рекомендовал эту волонтерскую программу всем, кто ищет значимый и
+                    незабываемый опыт. Организация была на высшем уровне. Для меня было честью быть
+                    частью такой удивительной инициативы.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="reviews__buttons">
+              <div class="reviews__line">
+                <span class="reviews__inner-line"></span>
+              </div>
+              <button type="button" class="reviews__btn-prev">
+                <svg width="10" height="10">
+                  <use xlink:href="img/sprite/sprites.svg#btn-arrow"></use>
+                </svg>
+              </button>
+              <button type="button" class="reviews__btn-next">
+                <svg width="10" height="10">
+                  <use xlink:href="img/sprite/sprites.svg#btn-arrow"></use>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="contacts">
+          <div class="container">
+            <div class="contacts__header">
+              <h2>Контакты</h2>
+              <ul class="contacts__list">
+                <li>
+                  <b>центральный офис</b>
+                  <p>
+                    г. Новосибирск, ул. Щетинкина 68,
+                    <br />
+                    культурный центр «Бейт Менахем»
+                  </p>
+                </li>
+                <li>
+                  <b>Телефон</b>
+                  <a href="tel:+796387687676">+7 963 876 876 76</a>
+                </li>
+                <li>
+                  <b>E-mail</b>
+                  <a href="mailto:info@masa.ru">Info@masa.ru</a>
+                </li>
+              </ul>
+            </div>
+            <div class="map" id="map"></div>
+          </div>
+        </section>
+        <section class="form">
+          <div class="container">
+            <div class="form__wrap">
+              <picture>
+                <source media="(max-width: 1199)" srcset="img/form/photo-tablet.jpg" width="678" height="780">
+                <img src="img/form/photo.jpg" alt="Картинка." width="1240" height="803">
+              </picture>
+              <div class="form__content">
+                <h3>Напишите нам</h3>
+                <p>
+                  Оставьте ваши контакты,
+                  если у вас остались вопросы&nbsp;–
+                  мы на них ответим!
+                </p>
+                <div class="form__fields">
+                  <div
+                    data-form-validate="data-form-validate"
+                    data-callback="base"
+                  >
+                    <form action="#" method="post">
+                      <div
+                        data-validate-type="text"
+                        data-limitation="name"
+                        class="modal__field"
+                        data-required="data-required"
+                      >
+                        <label for="name">Имя</label>
+                        <input type="text" name="name" id="name" autocomplete="off" />
+                      </div>
+
+                      <div class="modal__field" data-validate-type="phone" data-required="data-required">
+                        <label for="tel">Телефон</label>
+                        <input type="text" name="tel" id="tel" autocomplete="off" />
+                      </div>
+
+                      <div
+                        class="modal__field"
+                        data-required="data-required"
+                        data-validate-type="text"
+                      >
+                        <label for="message">Ваше сообщение</label>
+                        <textarea name="message" id="message"></textarea>
+                      </div>
+
+                      <div
+                        class="modal__field field-cities"
+                        data-validate-type="text"
+                        data-required="data-required"
+                      >
+                        <label for="city">Выберите город</label>
+                        <input class="input-cities" type="text" name="city" id="city" readonly />
+
+                        <svg
+                          width="16"
+                          height="16"
+                          viewBox="0 0 16 16"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M15.272 5.09082L7.99929 11.6363L0.726562 5.09082" stroke="#484848" />
+                        </svg>
+
+                        <div class="field-cities-select">
+                          <button type="button">Санкт-Петербург</button>
+                          <button type="button">Москва</button>
+                          <button type="button">Казань</button>
+                          <button type="button">Сочи</button>
+                        </div>
+                      </div>
+
+                      <div
+                        data-validate-type="checkbox"
+                        data-required="data-required"
+                        class="modal__policy"
+                      >
+                        <input type="checkbox" name="policy" id="policy" required />
+                        <span></span>
+                        <label for="policy">Я согласен на обработку моих персональных данных</label>
+                      </div>
+
+                      <button class="modal__btn btn btn-border" type="submit">
+                        отправить
+                        <div class="btn-content">
+                          <svg width="10" height="10">
+                            <use xlink:href="img/sprite/sprites.svg#btn-arrow"></use>
+                          </svg>
+                        </div>
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
         </section>
       </main>
       <footer class="footer">
@@ -692,8 +1065,7 @@
                   <li><a href="#">Контакты</a></li>
                 </ul>
               </div>
-              <div class="footer__social">
-            </div>
+              <div class="footer__social"></div>
               <ul class="social">
                 <li class="social__item">
                   <a href="#">
@@ -812,21 +1184,8 @@
                 <button class="modal__btn btn btn-border" type="submit">
                   отправить
                   <div class="btn-content">
-                    <svg
-                      width="10"
-                      height="10"
-                      viewBox="0 0 10 10"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <g clip-path="url(#clip0_806_1826)">
-                        <path d="M1 9L9 1M9 1H1.05298M9 1V8.94702" stroke="white" />
-                      </g>
-                      <defs>
-                        <clipPath id="clip0_806_1826">
-                          <rect width="10" height="10" fill="white" />
-                        </clipPath>
-                      </defs>
+                    <svg width="10" height="10">
+                      <use xlink:href="img/sprite/sprites.svg#btn-arrow"></use>
                     </svg>
                   </div>
                 </button>
@@ -839,7 +1198,7 @@
 
     <template id="news">
       <div class="new-card">
-        <img src="" alt="Новость." width="286" height="400">
+        <img src="" alt="Новость." width="286" height="400" />
         <div class="new-card__content">
           <div class="new-card__row-1">
             <span></span>
@@ -849,11 +1208,13 @@
           </div>
           <div class="new-card__row-3">
             <p></p>
-            <a class="new-card__link" href="#"><div class="btn-content">
-              <svg width="8" height="8">
-                <use xlink:href="img/sprite/sprites.svg#btn-arrow"></use>
-              </svg>
-            </div></a>
+            <a class="new-card__link" href="#">
+              <div class="btn-content">
+                <svg width="8" height="8">
+                  <use xlink:href="img/sprite/sprites.svg#btn-arrow"></use>
+                </svg>
+              </div>
+            </a>
           </div>
         </div>
       </div>

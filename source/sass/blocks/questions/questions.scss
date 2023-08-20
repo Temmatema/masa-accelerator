@@ -1,0 +1,254 @@
+.questions .container {
+  max-width: 1440px;
+  padding: 0 206px 124px;
+
+  @include vp-1199 {
+    padding: 0 45px 99px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px 70px;
+  }
+}
+
+.questions h2 {
+  font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 50px;
+  color: $color-blue;
+  margin-bottom: 67px;
+
+  @include vp-1199 {
+    font-size: 34px;
+    margin-bottom: 42px;
+  }
+
+  @include vp-767 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 33px;
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.accordion__element {
+  border-radius: 16px;
+  border: 1px solid $color-blue;
+  padding: 39px 40px 39px;
+
+  @include vp-1199 {
+    padding: 29px 29px;
+  }
+
+  @include vp-767 {
+    padding: 19px 14px;
+  }
+}
+
+.accordion__element.is-active {
+  background-color: $color-blue;
+  padding-bottom: 32px;
+
+  @include vp-1199 {
+    padding-bottom: 25px;
+  }
+
+  @include vp-767 {
+    padding-bottom: 13px;
+  }
+}
+
+.accordion__element.is-active .btn-content {
+  background-color: $color-default-white;
+  &::before {
+    background-color: $color-blue;
+    transform: rotateZ(90deg);
+  }
+
+  &::after {
+    background-color: $color-blue;
+  }
+}
+
+.accordion__element.is-active .accordion__button:hover .btn-content {
+  border-color: $color-default-white;
+  background-color: transparent;
+  &::before {
+    background-color: $color-default-white;
+  }
+
+  &::after {
+    background-color: $color-default-white;
+  }
+}
+
+.accordion__element.is-active .accordion__top-wrap {
+  p {
+    color: $color-default-white;
+  }
+}
+
+.accordion__top-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion__top-wrap p {
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 34px;
+  color: $color-blue;
+  max-width: 600px;
+
+  @include vp-1199 {
+    font-size: 22px;
+    line-height: 26px;
+    max-width: 580px;
+  }
+
+  @include vp-767 {
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.accordion__button {
+  background-color: transparent;
+  border: none;
+  display: flex;
+  padding: 0;
+}
+
+.accordion__button:hover {
+  .btn-content {
+    border-color: $color-blue;
+    background-color: $color-white-beige;
+
+    &::before {
+      background-color: $color-blue;
+    }
+
+    &::after {
+      background-color: $color-blue;
+    }
+  }
+}
+
+.accordion__button .btn-content {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 1px solid transparent;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 1px;
+    height: 18px;
+    background-color: $color-default-white;
+    transition: transform 0.2s ease;
+  }
+
+  &::after {
+    position: absolute;
+    content: '';
+    width: 18px;
+    height: 1px;
+    background-color: $color-default-white;
+  }
+}
+
+.accordion__wrapper {
+  padding-top: 12px;
+  max-width: 637px;
+
+  @include vp-1199 {
+    max-width: 536px;
+    padding-top: 16px;
+  }
+}
+
+.accordion__wrapper p {
+  font-size: 16px;
+  font-weight: 400;
+  color: $color-default-white;
+  line-height: 26px;
+
+  @include vp-1199 {
+    line-height: 20px;
+  }
+
+  @include vp-767 {
+    font-size: 14px;
+  }
+}
+
+.accordion__element-4 {
+  padding-top: 33px;
+  padding-bottom: 32px;
+
+  .accordion__top-wrap {
+    align-items: flex-start;
+  }
+  .accordion__button {
+    padding-top: 7px;
+  }
+
+  @include vp-1199 {
+    padding-top: 25px;
+    padding-bottom: 23px;
+
+    .accordion__button {
+      padding-top: 4px;
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 19px;
+    padding-bottom: 19px;
+
+    .accordion__button {
+      padding-top: 7px;
+    }
+  }
+}
+
+.accordion__element-5 {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  .accordion__top-wrap {
+    align-items: flex-start;
+  }
+  .accordion__button {
+    padding-top: 7px;
+  }
+
+  @include vp-1199 {
+    padding-top: 25px;
+    padding-bottom: 23px;
+
+    .accordion__button {
+      padding-top: 4px;
+    }
+  }
+
+  @include vp-767 {
+    padding-top: 19px;
+    padding-bottom: 19px;
+
+    .accordion__button {
+      padding-top: 7px;
+    }
+  }
+}

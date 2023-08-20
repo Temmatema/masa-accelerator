@@ -1,14 +1,16 @@
 .news .container {
   padding-top: 124px;
-  padding-bottom: 100px;
+  padding-bottom: 82px;
   max-width: 1440px;
 
   @include vp-1199 {
     padding-top: 98px;
+    padding-bottom: 58px;
   }
 
   @include vp-767 {
     padding-top: 69px;
+    padding-bottom: 27px;
   }
 }
 
