@@ -1,6 +1,6 @@
-import { ScrollLock } from '../../utils/scroll-lock';
-import { FocusLock } from '../../utils/focus-lock';
-import { Form } from '../form-validate/form';
+import {ScrollLock} from '../../utils/scroll-lock';
+import {FocusLock} from '../../utils/focus-lock';
+import {Form} from '../form-validate/form';
 
 export class Modals {
   constructor(settings = {}) {
@@ -123,8 +123,8 @@ export class Modals {
       modal.querySelectorAll('video, audio').forEach((el) => el.pause());
       modal.querySelectorAll('[data-iframe]').forEach((el) => {
         el.querySelector('iframe').contentWindow.postMessage(
-          '{"event": "command", "func": "pauseVideo", "args": ""}',
-          '*'
+            '{"event": "command", "func": "pauseVideo", "args": ""}',
+            '*'
         );
       });
     }
@@ -135,8 +135,8 @@ export class Modals {
       const autoPlay = el.closest('[data-auto-play]');
       if (autoPlay) {
         el.querySelector('iframe').contentWindow.postMessage(
-          '{"event":"command","func":"playVideo","args":""}',
-          '*'
+            '{"event":"command","func":"playVideo","args":""}',
+            '*'
         );
       }
     });
