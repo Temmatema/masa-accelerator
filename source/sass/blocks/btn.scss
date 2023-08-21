@@ -39,6 +39,20 @@
   }
 }
 
+.btn-border:focus {
+  outline: none;
+  color: $color-default-white;
+  background-color: $color-blue;
+
+  .btn-content {
+    background-color: $color-default-white;
+  }
+}
+
+.btn-border:active {
+  color: rgba($color: $color-default-white, $alpha: 0.8);
+}
+
 .btn-content {
   width: 46px;
   height: 46px;

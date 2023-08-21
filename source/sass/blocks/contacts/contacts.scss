@@ -86,10 +86,42 @@
 
 .contacts__header a {
   color: $color-default-white;
+  position: relative;
+
+  &::before {
+    width: 100%;
+    content: "";
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    background-color: transparent;
+  }
 
   @include vp-767 {
     font-size: 14px;
     line-height: 20px;
+  }
+}
+
+.contacts__header a:hover {
+  &::before {
+    background-color: $color-default-white;
+  }
+}
+
+.contacts__header a:focus {
+  outline: none;
+
+  &::before {
+    background-color: $color-default-white;
+  }
+}
+
+.contacts__header a:active {
+  opacity: 0.8;
+
+  &::before {
+    background-color: transparent;
   }
 }
 
@@ -110,7 +142,7 @@
   width: 100%;
   height: 500px;
   border-radius: 16px;
-  background-image: url('../img/map-back.jpg');
+  background-image: url("../img/map-back.jpg");
   background-size: cover;
 
   @include vp-767 {

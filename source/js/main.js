@@ -10,6 +10,7 @@ import './modules/programs-swiper.js';
 import './modules/news-swiper.js';
 import './modules/reviews-swiper.js';
 import './modules/map.js';
+import './modules/accordions.js';
 
 // ---------------------------------
 

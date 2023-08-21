@@ -11,7 +11,7 @@
   min-height: 800px;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
@@ -53,21 +53,21 @@
   align-items: center;
   width: 94px;
   height: 38px;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: 20px 20px 0 0;
 
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 20px;
     height: 20px;
     right: -20px;
     bottom: 0;
-    background-image: url('../img/hero-block/back/angle-sm.png');
+    background-image: url("../img/hero-block/back/angle-sm.png");
     background-repeat: no-repeat;
   }
 
   @include vp-767 {
-    border-radius: 12px 12px 0px 0px;
+    border-radius: 12px 12px 0 0;
     width: 80px;
     height: 28px;
 
@@ -75,7 +75,7 @@
       height: 10px;
       right: -10px;
       width: 10px;
-      background-image: url('../img/hero-block/back/angle-sm-mb.png');
+      background-image: url("../img/hero-block/back/angle-sm-mb.png");
     }
   }
 }
@@ -117,7 +117,7 @@
 .hero__title-wrap {
   background-color: $color-default-white;
   padding: 40px 50px 30px;
-  border-radius: 0px 30px 30px 0px;
+  border-radius: 0 30px 30px 0;
   width: 968px;
 
   @include vp-1199 {
@@ -127,7 +127,7 @@
 
   @include vp-767 {
     padding: 20px 14px 16px;
-    border-radius: 0px 16px 16px 0px;
+    border-radius: 0 16px 16px 0;
   }
 }
 
@@ -152,7 +152,7 @@
   display: flex;
   position: relative;
   background-color: $color-default-white;
-  border-radius: 0px 0px 30px 30px;
+  border-radius: 0 0 30px 30px;
   padding: 0 50px 28px;
   align-items: center;
   width: 772px;
@@ -161,17 +161,17 @@
 
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 26px;
     height: 26px;
     right: -26px;
     top: 6px;
-    background-image: url('../img/hero-block/back/angle.png');
+    background-image: url("../img/hero-block/back/angle.png");
     background-repeat: no-repeat;
   }
 
   @include vp-1199 {
-    width: 76.953vw;
+    width: 76.95vw;
     padding: 0 40px 31px;
     margin-top: -4px;
     align-items: flex-start;
@@ -215,19 +215,19 @@
     margin-right: 29px;
     font-size: 14px;
     padding: 0 14px 10px;
-    border-radius: 0px 0px 14px 0px;
+    border-radius: 0 0 14px 0;
     position: relative;
     max-width: none;
 
     &::after {
       position: absolute;
       transform: rotateZ(90deg);
-      content: '';
+      content: "";
       width: 10px;
       height: 10px;
       right: -10px;
       top: 4px;
-      background-image: url('../img/hero-block/back/angle-sm-mb.png');
+      background-image: url("../img/hero-block/back/angle-sm-mb.png");
       background-repeat: no-repeat;
     }
   }
@@ -236,19 +236,19 @@
 .hero__content-down > div {
   @include vp-767 {
     background-color: $color-default-white;
-    border-radius: 0px 0px 14px 14px;
+    border-radius: 0 0 14px 14px;
     padding: 4px 15px 10px 15px;
     position: relative;
 
     &::after {
       position: absolute;
       transform: rotateZ(90deg);
-      content: '';
+      content: "";
       width: 10px;
       height: 10px;
       right: -10px;
       top: 0;
-      background-image: url('../img/hero-block/back/angle-sm-mb.png');
+      background-image: url("../img/hero-block/back/angle-sm-mb.png");
       background-repeat: no-repeat;
     }
   }
@@ -290,6 +290,13 @@
 }
 
 .hero__link:hover {
+  svg {
+    transform: rotateZ(45deg);
+    color: $color-blue;
+  }
+}
+
+.hero__link:focus {
   svg {
     transform: rotateZ(45deg);
     color: $color-blue;

@@ -1,12 +1,7 @@
-// Colors
-// ---------------------------------
-
-// Default
-
 $color-default-grey:                #484848;
 $color-default-white:               #ffffff;
-$color-white-beige:                 #F0EFE9;
-$color-blue:                        #316DC2;
+$color-white-beige:                 #f0eff9;
+$color-blue:                        #316dc2;
 $color-transparent:                 rgba(255, 255, 255, 0);
 
 // Project palette
@@ -29,13 +24,10 @@ $ff-placeholder:                    "Placeholder", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
-
 $tf-default:                        ease;
 $trans-default:                     0.3s $tf-default;
-
 // если требуется изинг отличный от $tf-default, то переменную называем не цифрой
 $trans-modal:                       0.6s cubic-bezier(0.55, 0, 0.1, 1);
-
 $trans-600:                         0.6s $tf-default;
 
 // Viewports
@@ -47,6 +39,5 @@ $vp-1920:                           1920px;
 
 // Retina
 // ---------------------------------
-
 $retina-dpi:                        144dpi;
 $retina-dppx:                       1.5dppx;

@@ -98,6 +98,15 @@
   color: $color-blue;
 }
 
+.footer__menu a:focus {
+  outline: none;
+  color: $color-blue;
+}
+
+.footer__menu a:active {
+  color: #275699;
+}
+
 .footer__policy {
   display: flex;
   justify-content: space-between;
@@ -144,4 +153,20 @@
     margin: 0 auto 13px;
     padding-bottom: 0;
   }
+}
+
+.footer__policy a:hover {
+  color: $color-blue;
+  border-color: $color-blue;
+}
+
+.footer__policy a:focus {
+  outline: none;
+  color: $color-blue;
+  border-color: $color-blue;
+}
+
+.footer__policy a:active {
+  color: #275699;
+  border-color: #275699;
 }

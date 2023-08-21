@@ -181,7 +181,7 @@ export class Modals {
   }
 
   close(modalName = this._modalName) {
-    const thisForm = document.querySelector('.component-demo__form form');
+    const thisForm = document.querySelector('.modal__form form');
     const modal = document.querySelector(`[data-modal="${modalName}"]`);
     document.removeEventListener('click', this._documentClickHandler);
 

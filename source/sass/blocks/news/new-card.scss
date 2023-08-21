@@ -37,9 +37,6 @@
 
 .slide-active .new-card__row-2 {
   max-width: 291px;
-}
-
-.slide-active .new-card__row-2 {
   padding-top: 13px;
 }
 
@@ -56,12 +53,12 @@
 @mixin angle() {
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 16px;
     height: 16px;
     right: -16px;
     bottom: 0;
-    background-image: url('../img/news/angle.png');
+    background-image: url("../img/news/angle.png");
   }
 }
 
@@ -74,12 +71,12 @@
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     width: 16px;
     height: 16px;
     left: 0;
     top: -16px;
-    background-image: url('../img/news/angle.png');
+    background-image: url("../img/news/angle.png");
   }
 
   @include angle();
@@ -97,6 +94,7 @@
   padding-right: 10px;
   padding-top: 3px;
   position: relative;
+
   @include angle();
 
   @include vp-1199 {
@@ -194,5 +192,27 @@
   svg {
     transform: rotateZ(45deg);
     color: $color-blue;
+  }
+}
+
+
+.new-card__link:focus {
+  outline: none;
+
+  .btn-content {
+    background-color: $color-white-beige;
+  }
+
+  svg {
+    transform: rotateZ(45deg);
+    color: $color-blue;
+  }
+}
+
+.new-card__link:active {
+  svg {
+    transform: rotateZ(45deg);
+    color: $color-blue;
+    opacity: 0.8;
   }
 }

@@ -3,7 +3,7 @@
   padding: 0 206px 124px;
 
   @include vp-1199 {
-    padding: 0 45px 99px;
+    padding: 0 45px 101px;
   }
 
   @include vp-767 {
@@ -34,20 +34,87 @@
 .accordion {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 11px;
+
+  @include vp-1199 {
+    gap: 10px;
+  }
+
+  @include vp-767 {
+    gap: 9px;
+  }
 }
 
 .accordion__element {
   border-radius: 16px;
   border: 1px solid $color-blue;
   padding: 39px 40px 39px;
+  cursor: pointer;
 
   @include vp-1199 {
     padding: 29px 29px;
   }
 
   @include vp-767 {
-    padding: 19px 14px;
+    padding: 21px 14px 19px;
+  }
+}
+
+.accordion__element:hover {
+  background-color: $color-default-white;
+
+  .btn-content {
+    border-color: $color-blue;
+    background-color: transparent;
+
+    &::before {
+      background-color: $color-blue;
+    }
+
+    &::after {
+      background-color: $color-blue;
+    }
+  }
+}
+
+.accordion__element:focus {
+  outline: none;
+  background-color: $color-default-white;
+
+  .btn-content {
+    border-color: $color-blue;
+    background-color: transparent;
+
+    &::before {
+      background-color: $color-blue;
+    }
+
+    &::after {
+      background-color: $color-blue;
+    }
+  }
+}
+
+.accordion__element:active {
+  background-color: $color-default-white;
+
+  .accordion__top-wrap {
+    p {
+      color: #275699;
+    }
+  }
+
+  .btn-content {
+    border-color: #275699;
+    background-color: #275699;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    &::after {
+      background-color: $color-default-white;
+    }
   }
 }
 
@@ -66,6 +133,8 @@
 
 .accordion__element.is-active .btn-content {
   background-color: $color-default-white;
+  border-color: $color-default-white;
+
   &::before {
     background-color: $color-blue;
     transform: rotateZ(90deg);
@@ -76,9 +145,10 @@
   }
 }
 
-.accordion__element.is-active .accordion__button:hover .btn-content {
-  border-color: $color-default-white;
+.accordion__element.is-active:hover .btn-content {
   background-color: transparent;
+  border-color: $color-default-white;
+
   &::before {
     background-color: $color-default-white;
   }
@@ -87,6 +157,41 @@
     background-color: $color-default-white;
   }
 }
+
+.accordion__element.is-active:focus {
+  outline: none;
+
+  .btn-content {
+    background-color: transparent;
+    border-color: $color-default-white;
+
+    &::before {
+      background-color: $color-default-white;
+    }
+
+    &::after {
+      background-color: $color-default-white;
+    }
+  }
+}
+
+.accordion__element.is-active:active {
+  background-color: #275699;
+
+  .btn-content {
+    border-color: $color-default-white;
+    background-color: $color-default-white;
+
+    &::before {
+      background-color: #275699;
+    }
+
+    &::after {
+      background-color: #275699;
+    }
+  }
+}
+
 
 .accordion__element.is-active .accordion__top-wrap {
   p {
@@ -126,21 +231,6 @@
   padding: 0;
 }
 
-.accordion__button:hover {
-  .btn-content {
-    border-color: $color-blue;
-    background-color: $color-white-beige;
-
-    &::before {
-      background-color: $color-blue;
-    }
-
-    &::after {
-      background-color: $color-blue;
-    }
-  }
-}
-
 .accordion__button .btn-content {
   width: 40px;
   height: 40px;
@@ -152,7 +242,7 @@
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     width: 1px;
     height: 18px;
     background-color: $color-default-white;
@@ -161,7 +251,7 @@
 
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 18px;
     height: 1px;
     background-color: $color-default-white;
@@ -194,12 +284,13 @@
 }
 
 .accordion__element-4 {
-  padding-top: 33px;
-  padding-bottom: 32px;
+  padding-top: 31px;
+  padding-bottom: 33px;
 
   .accordion__top-wrap {
     align-items: flex-start;
   }
+
   .accordion__button {
     padding-top: 7px;
   }
@@ -230,6 +321,7 @@
   .accordion__top-wrap {
     align-items: flex-start;
   }
+
   .accordion__button {
     padding-top: 7px;
   }

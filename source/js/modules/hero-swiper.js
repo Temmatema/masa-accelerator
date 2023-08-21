@@ -7,10 +7,10 @@ const swiper = new Swiper('.hero', {
   initialSlide: 0,
   slidesPerView: 1,
   slidesPerGroup: 1,
-  // autoplay: {
-  //   delay: 3000,
-  //   disableOnInteraction: false,
-  // },
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
   loop: true,
   effect: 'fade',
   fadeEffect: {
