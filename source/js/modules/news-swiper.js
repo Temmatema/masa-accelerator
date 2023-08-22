@@ -7,6 +7,7 @@ if (newCard) {
 }
 const swiperWrap = document.querySelector('.news__swiper-wrapper');
 const filterButtons = document.querySelectorAll('.news__btn');
+const filterBlock = document.querySelector('.news__btns-wrap');
 
 if (swiperWrap && newCard) {
   createNews(news);
@@ -66,6 +67,12 @@ function createNews(array) {
       element.classList.add('swiper-slide');
       swiperWrap.appendChild(element);
     }
+
+    if (swiperWrap.childElementCount <= 3) {
+      filterBlock.style.display = 'none';
+    } else {
+      filterBlock.style.display = 'flex';
+    }
   } else if (windowWidth <= 1280 && windowWidth >= 768) {
     array = chunkArray(array, 4);
 
@@ -79,6 +86,12 @@ function createNews(array) {
       }
       swiperWrap.appendChild(element);
     });
+
+    if (swiperWrap.childElementCount <= 1) {
+      filterBlock.style.display = 'none';
+    } else {
+      filterBlock.style.display = 'flex';
+    }
   } else if (windowWidth <= 767) {
     array = chunkArray(array, 2);
 
@@ -92,6 +105,12 @@ function createNews(array) {
       }
       swiperWrap.appendChild(element);
     });
+
+    if (swiperWrap.childElementCount <= 1) {
+      filterBlock.style.display = 'none';
+    } else {
+      filterBlock.style.display = 'flex';
+    }
   }
 
   return swiperWrap;
