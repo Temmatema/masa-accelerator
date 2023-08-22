@@ -4,7 +4,6 @@ import {Form} from './modules/form-validate/form';
 import {initAccordions} from './utils/init-accordion';
 import './modules/menu-bar.js';
 import './modules/hero-swiper.js';
-import './modules/modal-policy.js';
 import './modules/select-modal.js';
 import './modules/programs-swiper.js';
 import './modules/news-swiper.js';
