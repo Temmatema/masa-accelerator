@@ -234,7 +234,7 @@
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     display: block;
     min-width: 20px;
     height: 20px;
@@ -255,7 +255,7 @@
   }
 }
 
-.form__policy input[type='checkbox'] {
+.form__policy input[type="checkbox"] {
   display: none;
 }
 
@@ -264,9 +264,9 @@
   background-color: rgba(255, 94, 102, 0.2);
 }
 
-.form__policy input[type='checkbox']:checked + span::before {
+.form__policy input[type="checkbox"]:checked + span::before {
   background-color: $color-default-white;
-  background-image: url('../img/check-arrow-blue.svg');
+  background-image: url("../img/check-arrow-blue.svg");
 }
 
 .form__field-cities-select {

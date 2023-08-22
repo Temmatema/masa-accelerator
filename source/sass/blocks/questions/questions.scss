@@ -237,7 +237,7 @@
 
   &::before {
     position: absolute;
-    content: '';
+    content: "";
     width: 1px;
     height: 18px;
     background-color: $color-default-white;
@@ -246,7 +246,7 @@
 
   &::after {
     position: absolute;
-    content: '';
+    content: "";
     width: 18px;
     height: 1px;
     background-color: $color-default-white;
