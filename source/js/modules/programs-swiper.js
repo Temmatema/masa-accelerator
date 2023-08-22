@@ -6,6 +6,7 @@ const lineChild = document.querySelector('.programs__inner-line');
 
 let screenWidth = window.innerWidth;
 let widthCount;
+let width; let currentWidth;
 
 if (screenWidth < 768) {
   widthCount = 0;
@@ -15,10 +16,11 @@ if (screenWidth < 768) {
   widthCount = 2;
 }
 
-let width = lineParent.offsetWidth / (slides.length - widthCount);
-let currentWidth = width;
-
-lineChild.style.width = `${currentWidth}px`;
+if (lineParent) {
+  width = lineParent.offsetWidth / (slides.length - widthCount);
+  currentWidth = width;
+  lineChild.style.width = `${currentWidth}px`;
+}
 
 // eslint-disable-next-line no-unused-vars
 const swiper = new Swiper('.programs__swiper', {

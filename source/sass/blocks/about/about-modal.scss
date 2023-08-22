@@ -155,8 +155,8 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 30px;
-  padding-top: 4px;
+  margin-bottom: 33px;
+  padding-top: 9px;
 
   label {
     font-size: 12px;
@@ -180,22 +180,42 @@
 }
 
 .modal__policy span {
-  display: block;
-  min-width: 20px;
-  height: 20px;
-  border: 1px solid $color-blue;
-  border-radius: 2px;
-  background-repeat: no-repeat;
-  background-position: center;
+  color: $color-default-grey;
+  opacity: 1;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  position: relative;
   cursor: pointer;
+  gap: 10px;
+  width: 100%;
+  display: block;
+  padding-left: 30px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 20px;
+    border: 1px solid rgba($color: $color-blue, $alpha: 1);
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto 0;
+  }
 }
 
-.modal__policy.is-invalid span {
+.modal__policy.is-invalid span::before {
   border-color: #ff5e66;
   background-color: rgba(255, 94, 102, 0.2);
 }
 
-.modal__policy input[type="checkbox"]:checked + span {
+.modal__policy input[type="checkbox"]:checked + span::before {
   background-color: $color-blue;
   background-image: url("../img/check-arrow.svg");
 }

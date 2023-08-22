@@ -1,10 +1,16 @@
 import Swiper from '../vendor/swiper.js';
 import {news} from '../mock/mock.js';
 
-const newCard = document.querySelector('#news').content.querySelector('.new-card');
+let newCard = document.querySelector('#news');
+if (newCard) {
+  newCard = newCard.content.querySelector('.new-card');
+}
 const swiperWrap = document.querySelector('.news__swiper-wrapper');
 const filterButtons = document.querySelectorAll('.news__btn');
-createNews(news);
+
+if (swiperWrap && newCard) {
+  createNews(news);
+}
 
 // eslint-disable-next-line no-unused-vars
 const swiper = new Swiper('.news__swiper', {
@@ -38,7 +44,6 @@ const swiper = new Swiper('.news__swiper', {
     },
   },
 });
-
 
 function createNews(array) {
   const windowWidth = window.innerWidth;
@@ -92,26 +97,28 @@ function createNews(array) {
   return swiperWrap;
 }
 
-filterButtons.forEach((btn) =>
-  btn.addEventListener('click', () => {
-    filterButtons.forEach((el) => {
-      el.classList.remove('active');
-    });
+if (filterButtons.length && newCard) {
+  filterButtons.forEach((btn) =>
+    btn.addEventListener('click', () => {
+      filterButtons.forEach((el) => {
+        el.classList.remove('active');
+      });
 
-    btn.classList.add('active');
+      btn.classList.add('active');
 
-    const filter = btn.getAttribute('data-filter');
+      const filter = btn.getAttribute('data-filter');
 
-    if (filter === 'all') {
-      createNews(news);
-    } else {
-      const newNews = news.filter((el) => el.type === filter);
-      createNews(newNews);
-    }
+      if (filter === 'all') {
+        createNews(news);
+      } else {
+        const newNews = news.filter((el) => el.type === filter);
+        createNews(newNews);
+      }
 
-    swiper.update();
-  })
-);
+      swiper.update();
+    })
+  );
+}
 
 function chunkArray(array, chunkSize) {
   const chunkedArray = [];

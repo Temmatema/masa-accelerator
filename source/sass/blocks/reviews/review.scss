@@ -52,15 +52,17 @@
 .review__content-top {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 25px;
+  gap: 50px;
+
+  @include vp-1199 {
+    gap: 0;
+  }
 
   @include vp-767 {
     align-items: flex-start;
     flex-direction: column;
-  }
-
-  @include vp-767 {
     gap: 14px;
   }
 }
@@ -105,6 +107,8 @@
   grid-template-columns: auto auto;
   row-gap: 5px;
   column-gap: 27px;
+  margin: auto 0;
+  max-width: 230px;
 
   @include vp-767 {
     row-gap: 6px;

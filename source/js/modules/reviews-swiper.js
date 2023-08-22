@@ -6,6 +6,8 @@ const lineChild = document.querySelector('.reviews__inner-line');
 
 let screenWidth = window.innerWidth;
 let widthCount;
+let width;
+let currentWidth;
 
 if (screenWidth < 1199) {
   widthCount = 0;
@@ -13,10 +15,12 @@ if (screenWidth < 1199) {
   widthCount = 1;
 }
 
-let width = lineParent.offsetWidth / (slides.length - widthCount);
-let currentWidth = width;
+if (lineParent) {
+  width = lineParent.offsetWidth / (slides.length - widthCount);
+  currentWidth = width;
 
-lineChild.style.width = `${currentWidth}px`;
+  lineChild.style.width = `${currentWidth}px`;
+}
 
 // eslint-disable-next-line no-unused-vars
 const swiper = new Swiper('.reviews__swiper', {
@@ -26,7 +30,7 @@ const swiper = new Swiper('.reviews__swiper', {
   spaceBetween: 29,
   breakpoints: {
     1200: {
-      slidesPerView: 'auto',
+      slidesPerView: 2,
       spaceBetween: 31,
     },
   },

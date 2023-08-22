@@ -52,30 +52,24 @@
 
   .btn-content__bar {
     background-color: $color-blue;
+
+    &::before {
+      background-color: $color-blue;
+    }
+
+    &::after {
+      background-color: $color-blue;
+    }
   }
 
   animation: menu-in 0.7s forwards ease-in-out;
-
-  .bar-1 {
-    top: 22px;
-    transform: rotateZ(45deg);
-  }
-
-  .bar-2 {
-    display: none;
-  }
-
-  .bar-3 {
-    bottom: 22px;
-    transform: rotateZ(-45deg);
-  }
 
   @include vp-767 {
     animation: menu-in-mob 0.7s forwards ease-in-out;
   }
 }
 
-.menu-true .header__menu-btn:hover {
+.header__menu-btn.open:hover {
   background-color: $color-default-white;
   color: $color-blue;
 
@@ -84,7 +78,19 @@
   }
 
   .btn-content__bar {
-    background-color: $color-default-white;
+    background-color: $color-blue;
+
+    &::before {
+      background-color: $color-default-white;
+      transform: rotateZ(45deg);
+      top: 0;
+    }
+
+    &::after {
+      background-color: $color-default-white;
+      transform: rotateZ(-45deg);
+      bottom: 0;
+    }
   }
 }
 
@@ -190,25 +196,52 @@
   width: 18px;
   height: 0.12em;
   border-radius: 30px;
-  transition: all 0.2s ease;
-}
 
-.bar-1 {
-  top: 17px;
-}
+  &::before {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 0.12em;
+    left: 0;
+    top: 6px;
+    background-color: $color-default-white;
+  }
 
-.bar-3 {
-  bottom: 17px;
+  &::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 0.12em;
+    left: 0;
+    bottom: 6px;
+    background-color: $color-default-white;
+  }
 }
 
 .btn-border:hover {
   .btn-content__bar {
     background-color: $color-blue;
+
+    &::before {
+      background-color: $color-blue;
+    }
+
+    &::after {
+      background-color: $color-blue;
+    }
   }
 }
 
 .btn-border:focus {
   .btn-content__bar {
     background-color: $color-blue;
+
+    &::before {
+      background-color: $color-blue;
+    }
+
+    &::after {
+      background-color: $color-blue;
+    }
   }
 }

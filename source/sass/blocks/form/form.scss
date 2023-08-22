@@ -205,56 +205,68 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 41px;
-  padding-top: 4px;
-
-  label {
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 12px;
-    cursor: pointer;
-    color: $color-default-white;
-  }
+  margin-bottom: 45px;
+  padding-top: 7px;
 
   @include vp-1199 {
-    margin-bottom: 38px;
+    margin-bottom: 44px;
   }
 
   @include vp-767 {
     padding-top: 2px;
     margin-bottom: 30px;
     justify-content: center;
-
-    label {
-      line-height: 14px;
-      margin: 0;
-    }
   }
 }
 
 .form__policy span {
-  display: block;
-  min-width: 20px;
-  height: 20px;
-  border: 1px solid rgba($color: $color-default-white, $alpha: 0.3);
-  border-radius: 2px;
-  background-repeat: no-repeat;
-  background-position: center;
+  color: $color-default-white;
+  opacity: 1;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 12px;
+  position: relative;
   cursor: pointer;
+  gap: 10px;
+  width: 100%;
+  display: block;
+  padding-left: 30px;
+
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 20px;
+    border: 1px solid rgba($color: $color-default-white, $alpha: 0.3);
+    border-radius: 2px;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto 0;
+  }
+
+  @include vp-767 {
+    font-size: 12px;
+    line-height: 14px;
+  }
 }
 
-.form__policy input[type="checkbox"] {
+.form__policy input[type='checkbox'] {
   display: none;
 }
 
-.form__policy.is-invalid span {
+.form__policy.is-invalid span::before {
   border-color: #ff5e66;
   background-color: rgba(255, 94, 102, 0.2);
 }
 
-.form__policy input[type="checkbox"]:checked + span {
+.form__policy input[type='checkbox']:checked + span::before {
   background-color: $color-default-white;
-  background-image: url("../img/check-arrow-blue.svg");
+  background-image: url('../img/check-arrow-blue.svg');
 }
 
 .form__field-cities-select {
@@ -372,7 +384,6 @@
     color: $color-default-white;
   }
 }
-
 
 .form__btn:active {
   color: rgba($color: $color-blue, $alpha: 0.8);

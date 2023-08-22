@@ -1,19 +1,16 @@
 .reviews .container {
   overflow: hidden;
   max-width: 1440px;
-  padding-right: 99px;
   display: grid;
   grid-template-rows: auto auto auto;
   grid-template-columns: auto 54px;
   padding-bottom: 120px;
 
   @include vp-1199 {
-    padding-right: 45px;
     padding-bottom: 100px;
   }
 
   @include vp-767 {
-    padding-right: 15px;
     padding-bottom: 27px;
   }
 }

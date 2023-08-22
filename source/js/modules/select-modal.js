@@ -5,21 +5,29 @@ const formInput = document.querySelector('.form__input-cities');
 const modalSelect = document.querySelectorAll('.field-cities-select button');
 const formSelect = document.querySelectorAll('.form__field-cities-select button');
 
-modalInput.addEventListener('click', () => {
-  modalBlock.classList.toggle('cities-active');
-});
+if (modalInput) {
+  modalInput.addEventListener('click', () => {
+    modalBlock.classList.toggle('cities-active');
+  });
+}
 
-formInput.addEventListener('click', () => {
-  formBlock.classList.toggle('cities-active');
-});
+if (formInput) {
+  formInput.addEventListener('click', () => {
+    formBlock.classList.toggle('cities-active');
+  });
+}
 
-modalSelect.forEach((el) =>
-  el.addEventListener('click', () => selectBtns(el, modalBlock, modalInput))
-);
+if (modalSelect) {
+  modalSelect.forEach((el) =>
+    el.addEventListener('click', () => selectBtns(el, modalBlock, modalInput))
+  );
+}
 
-formSelect.forEach((el) =>
-  el.addEventListener('click', () => selectBtns(el, formBlock, formInput))
-);
+if (formSelect) {
+  formSelect.forEach((el) =>
+    el.addEventListener('click', () => selectBtns(el, formBlock, formInput))
+  );
+}
 
 function selectBtns(el, block, input) {
   input.value = el.textContent;
