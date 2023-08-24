@@ -1,11 +1,11 @@
 .menu {
+  display: none;
   width: 100%;
   background-color: $color-blue;
   border-radius: 16px;
   padding: 25px;
   flex-direction: column;
   gap: 3px;
-  display: none;
 }
 
 .menu__item {
