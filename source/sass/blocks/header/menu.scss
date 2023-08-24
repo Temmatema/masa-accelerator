@@ -1,16 +1,21 @@
-
 .menu {
   width: 100%;
   background-color: $color-blue;
   border-radius: 16px;
   padding: 25px;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.menu__item {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  align-items: flex-start;
 }
 
 .menu__item a {
   padding: 10px 0;
+  position: relative;
   display: block;
   color: $color-default-white;
   text-transform: uppercase;
@@ -24,17 +29,27 @@
   opacity: 1;
 }
 
+.menu__item a:focus {
+  outline: none;
+  opacity: 1;
+}
+
 .menu__inner-item a {
   text-transform: initial;
   font-weight: 400;
   letter-spacing: 0;
-  padding: 8px 0;
+  padding: 6px 0;
 }
 
 .menu__list {
   list-style: none;
+  display: none;
   margin: 0;
-  padding: 2px 0 10px 16px;
+  padding: 0 0 6px 16px;
+}
+
+.menu__list.active {
+  display: block;
 }
 
 .item-select {
@@ -43,8 +58,17 @@
   transition: max-height 0.3s ease;
 }
 
+.item-select a {
+  padding-right: 22px;
+}
+
 .item-select svg {
   transition: transform 0.3s ease;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
 }
 
 .item-select-active {

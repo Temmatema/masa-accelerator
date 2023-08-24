@@ -26,7 +26,7 @@ const swiper = new Swiper('.news__swiper', {
         dynamicMainBullets: 4,
       },
     },
-    1281: {
+    1200: {
       slidesPerGroup: 3,
       spaceBetween: 32,
     },
@@ -50,7 +50,7 @@ function createNews(array) {
   const windowWidth = window.innerWidth;
   swiperWrap.innerHTML = '';
 
-  if (windowWidth > 1280) {
+  if (windowWidth > 1199) {
     array.forEach((el, index) => {
       const newCardClone = createNew(el);
 
@@ -73,7 +73,7 @@ function createNews(array) {
     } else {
       filterBlock.style.display = 'flex';
     }
-  } else if (windowWidth <= 1280 && windowWidth >= 768) {
+  } else if (windowWidth <= 1199 && windowWidth >= 768) {
     array = chunkArray(array, 4);
 
     array.forEach((item) => {

@@ -112,7 +112,9 @@
 
 .about__btn {
   width: 277px;
-  height: 54px;
+  justify-content: center;
+  padding-right: 53px;
+  min-height: 54px;
   font-size: 14px;
   font-weight: 500;
   line-height: 14px;
@@ -127,11 +129,12 @@
 
   @include vp-767 {
     width: 221px;
-    height: 42px;
+    min-height: 42px;
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.24px;
     gap: 19px;
+    padding-right: 41px;
   }
 }
 

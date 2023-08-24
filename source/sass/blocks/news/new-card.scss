@@ -6,7 +6,7 @@
   border-radius: 12px;
   width: calc((100% - 96px) / 4);
 
-  @media (max-width: 1280px) {
+  @include vp-1199 {
     width: 100%;
     height: 350px;
   }
@@ -37,7 +37,12 @@
 
 .slide-active .new-card__row-2 {
   max-width: 291px;
+  width: auto;
   padding-top: 13px;
+}
+
+.slide-active .new-card__row-3 {
+  width: auto;
 }
 
 .new-card__content {
@@ -90,6 +95,7 @@
   background-color: $color-white-beige;
   border-radius: 0 12px 0 0;
   max-width: 214px;
+  width: 14.86vw;
   padding-bottom: 2px;
   padding-right: 10px;
   padding-top: 3px;
@@ -99,6 +105,7 @@
 
   @include vp-1199 {
     max-width: 207px;
+    width: auto;
   }
 
   @include vp-767 {
@@ -110,19 +117,21 @@
 .new-card__row-3 {
   background-color: $color-white-beige;
   border-radius: 0 12px 0 0;
-  gap: 10px;
+  gap: 15px;
   padding-right: 19px;
   padding-bottom: 13px;
   padding-top: 8px;
   align-items: center;
   display: flex;
   position: relative;
+  width: 16.67vw;
 
   @include angle();
 
   @include vp-1199 {
     padding-bottom: 10px;
     padding-top: 6px;
+    width: auto;
   }
 
   @include vp-767 {
@@ -171,9 +180,16 @@
   }
 }
 
+.new-card__link {
+  width: 30px;
+  height: 30px;
+  position: relative;
+}
+
 .new-card__link .btn-content {
   width: 30px;
   display: flex;
+  right: 0;
   align-items: center;
   justify-content: center;
   height: 30px;

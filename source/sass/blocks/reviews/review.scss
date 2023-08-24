@@ -3,6 +3,7 @@
   border-radius: 16px;
   border: 1px solid $color-blue;
   max-width: 605px;
+  height: auto;
 
   @include vp-1199 {
     max-width: 561px;

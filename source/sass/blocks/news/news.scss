@@ -99,7 +99,7 @@
   position: relative;
   height: 472px;
 
-  @media (max-width: 1280px) {
+  @include vp-1199 {
     height: 793px;
   }
 
