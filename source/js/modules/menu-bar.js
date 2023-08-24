@@ -28,7 +28,7 @@ function btnHandler() {
   } else {
     menuWrap.classList.remove('menu-false');
     menuWrap.classList.add('menu-true');
-    menu.style.display = 'block';
+    menu.style.display = 'flex';
     footer.style.display = 'none';
     wrapper.style.overflow = 'hidden';
   }
