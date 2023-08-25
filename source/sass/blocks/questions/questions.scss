@@ -56,7 +56,7 @@
   }
 
   @include vp-767 {
-    padding: 21px 14px 19px;
+    padding: 21px 14px 18px;
   }
 }
 
@@ -303,7 +303,11 @@
 
   @include vp-767 {
     padding-top: 19px;
-    padding-bottom: 19px;
+    padding-bottom: 20px;
+
+    .accordion__top-wrap {
+      align-items: center;
+    }
 
     .accordion__button {
       padding-top: 7px;
@@ -335,6 +339,10 @@
   @include vp-767 {
     padding-top: 19px;
     padding-bottom: 19px;
+
+    .accordion__top-wrap {
+      align-items: center;
+    }
 
     .accordion__button {
       padding-top: 7px;

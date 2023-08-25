@@ -60,11 +60,12 @@
   width: 232px;
   min-height: 54px;
   justify-content: center;
-  padding-right: 53px;
+  padding-right: 70px;
   font-size: 14px;
   font-weight: 500;
   line-height: 14px;
   letter-spacing: 0.28px;
+  padding-left: 20px;
   gap: 29px;
   background-color: $color-white-beige;
 
@@ -78,7 +79,7 @@
     grid-column: 1/3;
     width: 203px;
     min-height: 42px;
-    padding-right: 41px;
+    padding-right: 57px;
     font-size: 12px;
     line-height: 12px;
     letter-spacing: 0.24px;
@@ -152,10 +153,7 @@
   object-fit: cover;
   width: 100%;
   height: 100%;
-
-  @include vp-767 {
-    object-position: 0;
-  }
+  object-position: top;
 }
 
 .programs__inner-top {
@@ -361,6 +359,39 @@
 .programs__btn-prev svg {
   color: $color-blue;
   transform: rotateZ(-135deg);
+}
+
+.programs__btn-prev:disabled {
+  cursor: initial;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  svg {
+    color: #A9AFB7;
+  }
+}
+
+.programs__btn-next:disabled {
+  cursor: initial;
+
+  &:hover {
+    background-color: transparent;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  svg {
+    color: #A9AFB7;
+  }
 }
 
 .programs__btn-next svg {

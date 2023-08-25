@@ -123,3 +123,36 @@
   color: $color-blue;
   transform: rotateZ(45deg);
 }
+
+.reviews__btn-next:disabled {
+  cursor: initial;
+
+  &:hover {
+    background-color: transparent;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  svg {
+    color: #A9AFB7;
+  }
+}
+
+.reviews__btn-prev:disabled {
+  cursor: initial;
+
+  &:hover {
+    background-color: transparent;
+    opacity: 1;
+  }
+
+  &:active {
+    opacity: 1;
+  }
+
+  svg {
+    color: #A9AFB7;
+  }
+}
