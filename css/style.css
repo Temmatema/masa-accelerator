@@ -4689,12 +4689,12 @@ button,
 }
 
 @media (max-width: 1420px) {
+  .features__wrap {
+    padding: 92px 40px 56px 60px;
+  }
+
   .features__item {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    gap: 12px;
+    padding: 30px;
   }
 }
 
@@ -4795,7 +4795,10 @@ button,
   }
 
   .features__item {
-    padding: 30px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
     padding-bottom: 25px;
     gap: 7px;
   }
@@ -5462,7 +5465,9 @@ button,
   }
 
   .programs .swiper {
-    margin-bottom: 30px;
+    width: 100%;
+    margin: 0 auto 30px;
+    max-width: 450px;
   }
 
   .programs h2 {
