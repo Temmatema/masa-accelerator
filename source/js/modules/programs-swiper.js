@@ -28,7 +28,7 @@ const swiper = new Swiper('.programs__swiper', {
   direction: 'horizontal',
   initialSlide: 0,
   slidesPerView: 1,
-  spaceBetween: 0,
+  spaceBetween: 15,
   navigation: {
     nextEl: '.programs__btn-next',
     prevEl: '.programs__btn-prev',

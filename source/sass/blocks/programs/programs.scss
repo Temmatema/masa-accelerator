@@ -25,7 +25,9 @@
   margin-bottom: 41px;
 
   @include vp-767 {
-    margin-bottom: 30px;
+    width: 100%;
+    margin: 0 auto 30px;
+    max-width: 450px;
   }
 }
 
